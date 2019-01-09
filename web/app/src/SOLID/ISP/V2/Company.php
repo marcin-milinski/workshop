@@ -28,9 +28,9 @@ class RobotWorker implements WorkerInterface
         return 'robot is working';
     }
 
-    // This breaks Interface Segregation Principle as client (btw. LSP too)
-    // Client should not be forced to implement an interface they do not use.
-    // However, the class must conform to the contract (interface) and implement this method,
+    // This breaks Interface Segregation Principle (btw. LSP too) because
+    // client should not be forced to implement an interface they do not use.
+    // However, the class must conform to the contract (interface) and implement its method,
     // so how to solve this problem?
     //
     // Solution: get rid of fat interfaces

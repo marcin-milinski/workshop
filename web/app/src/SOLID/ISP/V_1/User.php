@@ -13,7 +13,7 @@ interface RemindableInterface
 }
 
 // a side note: this is Laravel (a popular PHP framework) example
-// each User class by default extends Eloquent (a DB layer, ORM class)
+// each User class by default extends Eloquent (a DB layer, ActiveRecord/ORM class)
 // that provides DB layer API, ie. $user->save();
 class User extends Eloquent implements UserInterface, RemindableInterface
 {

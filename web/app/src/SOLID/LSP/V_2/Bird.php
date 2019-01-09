@@ -59,9 +59,9 @@ class BirdClientBad
 {
     public function __construct(Bird $bird)
     {
-        // you can imaging there're other birds that do not fly and for example can run
+        // you can imagine there're other birds that do not fly and for example can run
         // and the below implementation would then need to be changed again in the future
-        // with eg. elseif ($bird instanceof Ostrich) { ... }, many combinations really
+        // with eg. elseif ($bird instanceof Chicken) { ... }, many combinations really
         if ($bird instanceof Penguin) {
             $speed = $bird->getSwimmingSpeed();
         } else {
@@ -75,7 +75,7 @@ class BirdClientNotThatBad
     public function __construct(Bird $bird)
     {
         // implementing "canFly" method could be a quick fix
-        // but it also violates OCP principle, ie. we may need "canSwim" or "canRun" in the future
+        // but it also violates OCP principle, ie. we may need "canRun" for Chicken in the future
         if ($bird->canFly()) {
             $speed = $bird->getFlyingSpeed();
         } else {

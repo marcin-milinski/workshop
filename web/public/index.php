@@ -3,9 +3,9 @@
 include '../app/vendor/autoload.php';
 
 use App\Workshop\SOLID\LSP\V_3\{
-    BirdClient,
-    Penguin,
-    Hawk
+    BirdClient, Penguin, Hawk,
+    FruitProcessor, Fruit, Apple,
+    VegetableProcessor, Vegetable, Pumpkin, Carrot, Peelable, Processable
 };
 
 ?>
@@ -30,7 +30,7 @@ use App\Workshop\SOLID\LSP\V_3\{
         */
         ?>
 
-        <h2>Open-CLosed Principle</h2>
+        <h2>Open-Closed Principle</h2>
 
         <?php
         /*
@@ -48,8 +48,32 @@ use App\Workshop\SOLID\LSP\V_3\{
         <h2>Liskov Substitution Principle</h2>
 
         <?php
-        $speed = (new BirdClient(new Hawk))->getSpeed();
-        var_dump($speed);
+        // -- Bird example
+
+        $hawkSpeed = (new BirdClient(new Hawk))->getSpeed();
+        var_dump($hawkSpeed);
+
+        $penguinSpeed = (new BirdClient(new Penguin))->getSpeed();
+        var_dump($penguinSpeed);
+
+        // -- Fruit and Veg examples
+
+        // Fruit example - will not work due to mismatch in returned type
+        //$fruitProcessing = (new FruitProcessor(new Apple));
+        //var_dump($fruitProcessing->make());
+
+        $vegetableProcessing = (new VegetableProcessor(new Vegetable));
+        var_dump($vegetableProcessing->make());
+        //var_dump((new Vegetable)->cook());
+
+        $carrotProcessing = (new VegetableProcessor(new Carrot));
+        var_dump($carrotProcessing->make());
+        //var_dump((new Carrot)->cook());
+
+        $pumpkinProcessing = (new VegetableProcessor(new Pumpkin(new Vegetable)));
+        var_dump((new Pumpkin(new Vegetable))->peel());
+        var_dump($pumpkinProcessing->make());
+        //var_dump((new Pumpkin(new Vegetable))->cook());
         ?>
 
         <h2>Interface Segregation Principle</h2>

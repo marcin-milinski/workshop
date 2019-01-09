@@ -31,8 +31,7 @@ Extra resources: https://blog.cleancoder.com/uncle-bob/2014/05/08/SingleReponsib
 
 _“When you have a module that you want to extend without modifying separate the extensible behaviour behind an interface and flip the dependencies” - Robert C. Martin, “Clean Code” author_
 
-**A side note**: OCP doesn't mean that a new dependency cannot be injected to a class and each change requires creating a sub-class. No, it rather means that existing dependencies should conform to OCP.
-_Extend_ keyword is much broader in this context and allows class extension through composition as well, not just inheritance.
+**A side note**: _Extension_ keyword is much broader in this context and allows class extension through composition as well, not just inheritance.
 
 Extra resources: https://springframework.guru/principles-of-object-oriented-design/open-closed-principle/
 
@@ -60,7 +59,7 @@ Solutions:
 
 ### DIP - Dependency Inversion Principle
 
-Conventional application architecture follows a top-down design approach where a high-level problem is broken into smaller parts. In other words, the high-level design is described in terms of these smaller parts. As a result, high-level modules that gets written directly depends on the smaller (low-level) modules.
+Conventional application architecture follows a top-down design approach where a high-level problem is broken into smaller parts. In other words, the high-level design is described in terms of these smaller parts. As a result, high-level modules that gets written directly depend on the smaller (low-level) modules.
 
 DIP says instead:
 

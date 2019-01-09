@@ -28,6 +28,8 @@ class ProductsRepositoryDB implements ProductsRepositoryInterface
     }
 }
 
+// A client example below to shows how badly the LSP violation can hit the code
+
 // As you see, adding ProductsRepositoryDB class leads to
 // changes in the following function.
 // Breaking LSP leads to breaking Open-Closed Principle too

@@ -22,8 +22,6 @@ class PasswordReminder
 
 
 
-
-
 // This PasswordReminder class doesn't need to have a knowledge about
 // full User object or even Eloquent class which User depends on
 // and that's the reason we use RemindableInterface instead as it provides
