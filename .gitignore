@@ -11,6 +11,8 @@ web/app/report/
 data/
 
 # PHPStorm
+.idea/
+*/.idea/
 .idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/dictionaries
